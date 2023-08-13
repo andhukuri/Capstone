@@ -5,6 +5,7 @@ These are related to sritestjob-1 or Job1
 Try below different scenarios to check the status:
 for Build Steps:
 Senario:1 : Fail
+#below is the build command
 Executing the build step in Sritest for docker
 # Create the Docker image
 sudo docker build /home/ubuntu/jenkins/workspace/sritestjob1 -t developapp
@@ -16,13 +17,14 @@ using -p instead of -d and also the workspace directory for job one was sritestj
 (-1) is creating problems due to Jenkins switches creating new job sritestjob1 copying existing
 Also, ensure that the docker file follows standards with caps and normal letters for commands.
 
+#below is the build command
 # Create the Docker image
 sudo docker build /home/ubuntu/jenkins/workspace/sritestjob1 -t developapp
 # Run the Docker image in a container
 sudo docker run -itd -p 81:80 developapp
 
 #senario:3:  deleting the allocated port and re-assessing to docker build
-
+#below is the build command
 #List all stopped containers, Get the container IDs of all stopped containers,Remove all stopped containers, regardless of whether they are running or have unsaved data.
 sudo docker rm -f $(sudo docker ps -a -q)
 # Create the Docker image
@@ -57,7 +59,7 @@ sudo docker run -itd -p 82:80 masterapp
 #rescrict where this project can run: sriprod
 #Branchspecifier: */master
 
-
+#below is the build command
 #List all stopped containers, Get the container IDs of all stopped containers,Remove all stopped containers, regardless of whether they are running or have unsaved data.
 sudo docker rm -f $(sudo docker ps -a -q)
 # Create the Docker image
