@@ -45,7 +45,8 @@ sudo docker build /home/ubuntu/jenkins/workspace/sritestjob2 -t masterapp
 # Run the Docker image in a container
 sudo docker run -itd -p 82:80 masterapp
 
-#After successful run of job2 add post build steps to run job3 for final release
+#After successful run of job2 add post build steps to run job3 for final release 
+#select build other project and in project to build select sriprodjob3
 
 ******************************************************************************************************************************************************
 #Job 3
