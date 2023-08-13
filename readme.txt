@@ -13,3 +13,22 @@ sudo docker rm -f $(sudo docker ps -a -q)
 sudo docker build /home/ubuntu/jenkins/workspace/sritestjob2 -t masterapp
 # Run the Docker image in a container
 sudo docker run -itd -p 82:80 masterapp
+
+#After successful run of job2 add post build steps to run job3 for final release
+
+
+#Job 3
+#description: this a project to execute job3 in sriprod using git hubwebhooks and using the Master branch after job 2 or sritestjob2 is executed successfully.
+#git hub project:https://github.com/andhukuri/Capstone.git/
+#rescrict where this project can run: sriprod
+#Branchspecifier: */master
+
+
+#List all stopped containers, Get the container IDs of all stopped containers,Remove all stopped containers, regardless of whether they are running or have unsaved data.
+sudo docker rm -f $(sudo docker ps -a -q)
+# Create the Docker image
+sudo docker build . -t finalrelease
+# Run the Docker image in a container
+sudo docker run -itd -p 82:80 finalrelease
+
+
